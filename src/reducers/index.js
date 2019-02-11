@@ -1,13 +1,11 @@
+import {combineReducers} from "redux";
+import userReducer from './user';
+import pageReducer from './page';
 
-const initialState = {
-  user: 'Unknown'
-};
+const rootReducer = combineReducers({
+  user: userReducer,
+  page: pageReducer
+});
 
-const rootReducer = (state = initialState) => {
-  return state
-};
+export default rootReducer
 
-export {
-  initialState,
-  rootReducer
-}
